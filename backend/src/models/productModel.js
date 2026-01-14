@@ -7,7 +7,6 @@ export const getAllProductsModel = async () => {
 
     const [rows] = await pool.query(sql);
 
-J
     return rows;
 };
 
@@ -17,7 +16,7 @@ export const createProductModel = async (newProduct) => {
 
     const sql = `
         INSERT INTO productes (nom, quantitat, preu, descripcio) 
-        VALUES (?, ?, ?, ?)J
+        VALUES (?, ?, ?, ?)
     `;
 
     // Creacio baix prevenció injecció sql al parametritzar els camps
