@@ -1,0 +1,1 @@
+Adjunte captures del funcionament de les peticions backend amb un exemple GET que te les restriccions de token i rol admin, i per altra banda el funcionament del Frontend a Vue 

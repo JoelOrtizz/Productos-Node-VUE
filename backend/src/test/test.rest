@@ -1,0 +1,26 @@
+get http://localhost:3000/api/products
+
+####
+post http://localhost:3000/api/products
+Content-Type: application/json
+
+{
+  "nom": "Iphone 17",
+  "quantitat": 10,
+  "preu": 150,
+  "descripcio": "Descripcio del mobil"
+}
+
+####
+delete http://localhost:3000/api/products/1
+
+####
+put http://localhost:3000/api/products/3
+Content-Type: application/json
+
+{
+  "nom": "Iphone 17 ACTUALIZADO",
+  "quantitat": 15,
+  "preu": 150,
+  "descripcio": "Descripcio del mobil"
+}

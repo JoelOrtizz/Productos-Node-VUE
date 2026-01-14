@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:latest
+    container_name: mysql_products_examen
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: administrador  # Contraseña del superusuario
+      MYSQL_DATABASE: inventari_db      # Crea esta DB automáticamente
+      MYSQL_USER: alumno               # Usuario para tu app
+      MYSQL_PASSWORD: alumno       # Contraseña del usuario app
+    ports:
+      - "3306:3306"                       # Puerto Host:Puerto Contenedor
+    volumes:
+      - ./database/products.sql:/docker-entrypoint-initdb.d/products.sql        # Persistencia de datos
+
+volumes:
+  mysql_data:                             # Definición del volumen
